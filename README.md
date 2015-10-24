@@ -9,7 +9,7 @@ A utility to performantly event scroll and resize events using requestAnimationF
 ```
 import measurer from 'raf-measure';
 
-measurer.register('scroll', {
+let measureId = measurer.register('scroll', {
   callback({ scrollTop, scrollLeft }) {
     console.log(scrollTop, scrollLeft);
   }
@@ -21,7 +21,7 @@ measurer.register('scroll', {
 ```
 import measurer from 'raf-measure';
 
-measurer.register('resize', {
+let measureId = measurer.register('resize', {
   callback({ height, width }) {
     console.log(height, width);
   }
@@ -33,7 +33,7 @@ measurer.register('resize', {
 ```
 import measurer from 'raf-measure';
 
-measurer.register('inViewPort', {
+let measureId = measurer.register('inViewPort', {
   element: document.getElementById('my-div'),
   callback({ height, width }) {
     console.log(height, width);
@@ -41,4 +41,20 @@ measurer.register('inViewPort', {
   // optional hitbox must return a bool
   //, hitbox({elLeft, elTop, elWidth, elHeight}, {clientX, clientY, clientWidth, clientHeight}) {}
 } /*, optional context */);
+```
+
+### Unregistering Events
+```
+import measurer from 'raf-measure';
+
+let measureId = measurer.register('inViewPort', {
+  element: document.getElementById('my-div'),
+  callback({ height, width }) {
+    console.log(height, width);
+  }
+  // optional hitbox must return a bool
+  //, hitbox({elLeft, elTop, elWidth, elHeight}, {clientX, clientY, clientWidth, clientHeight}) {}
+} /*, optional context */);
+
+measurer.unregister('inViewPort', measureId);
 ```
