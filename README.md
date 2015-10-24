@@ -1,6 +1,6 @@
 # rAF Measure
 
-A utility to performantly to event scroll and resize handlers in the browser using requestAnimationFrame. This utility also allows you know when a registered element has entered the viewport.
+A utility to performantly event scroll and resize events using requestAnimationFrame. This utility also allows you know when a registered element has entered the viewport.
 
 ## Usage
 
