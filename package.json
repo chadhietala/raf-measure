@@ -1,0 +1,14 @@
+{
+  "name": "raf-measure",
+  "version": "0.0.0",
+  "description": "Utility for performantly measuring resize, scrolling, and elements entering viewport using rAF.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rAF"
+  ],
+  "author": "Chad Hietala <chadhietala@gmail.com>",
+  "license": "MIT"
+}
