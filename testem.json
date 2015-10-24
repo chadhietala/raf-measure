@@ -1,0 +1,11 @@
+{
+  "framework": "mocha",
+  "test_page": "test-build/harness.html",
+  "launch_in_dev": [
+    "PhantomJS",
+    "Chrome"
+  ],
+  "launch_in_ci": [
+    "PhantomJS"
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="mocha.css">
+    <style media="screen">
+      #mocha {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="marker" style="position: absolute; top: 2000px;">Marker</div>
+    <script src="loader.js" charset="utf-8"></script>
+    <script src="mocha.js" charset="utf-8"></script>
+    <script src="expect.js" charset="utf-8"></script>
+    <script src="/testem.js"></script>
+    <script>
+      mocha.setup({
+        ui: 'bdd',
+        timeout: 200,
+        ignoreLeaks: true
+      });
+    </script>
+    <script src="raf-measure.js"></script>
+    <script src="test.js"></script>
+    <script type="text/javascript">
+      require('test');
+    </script>
+    <script>
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+    </script>
+  </body>
+</html>

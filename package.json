@@ -2,13 +2,25 @@
   "name": "raf-measure",
   "version": "0.0.0",
   "description": "Utility for performantly measuring resize, scrolling, and elements entering viewport using rAF.",
-  "main": "lib/index.js",
+  "jsnext:main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "broccoli serve",
+    "test": "rm -rf test-build && TEST=true broccoli build test-build && testem",
+    "prepublish": "broccoli build dist"
   },
   "keywords": [
     "rAF"
   ],
   "author": "Chad Hietala <chadhietala@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "amd-name-resolver": "0.0.2",
+    "broccoli-babel-transpiler": "^5.4.5",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-funnel": "^0.2.10",
+    "broccoli-merge-trees": "^0.2.3",
+    "mocha": "^2.3.3",
+    "testem": "^0.9.8"
+  }
 }
