@@ -1,9 +1,9 @@
 {
   "name": "raf-measure",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utility for performantly measuring resize, scrolling, and elements entering viewport using rAF.",
   "jsnext:main": "lib/index.js",
-  "main": "dist/index.js",
+  "main": "dist/raf-measure.js",
   "scripts": {
     "start": "broccoli serve",
     "test": "rm -rf test-build && TEST=true broccoli build test-build && testem",
