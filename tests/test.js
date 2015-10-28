@@ -23,10 +23,10 @@ describe('raf-measure', () => {
     });
     expect(measurer._queues.scroll.length).to.eql(1);
     expect(measurer._queues.resize.length).to.eql(1);
-    expect(measurer._queues.scroll.length).to.eql(1);
+    expect(measurer._queues.inViewPort.length).to.eql(1);
   });
 
-  it('should unregister events', () => {
+  it('should unregister events', (done) => {
     let mScroll = measurer.register('scroll', {
       callback: () => {}
     });
@@ -42,15 +42,18 @@ describe('raf-measure', () => {
 
     expect(measurer._queues.scroll.length).to.eql(1);
     expect(measurer._queues.resize.length).to.eql(1);
-    expect(measurer._queues.scroll.length).to.eql(1);
+    expect(measurer._queues.inViewPort.length).to.eql(1);
 
     measurer.unregister('scroll', mScroll);
     measurer.unregister('resize', mResize);
     measurer.unregister('inViewPort', minViewPort);
 
-    expect(measurer._queues.scroll.length).to.eql(0);
-    expect(measurer._queues.resize.length).to.eql(0);
-    expect(measurer._queues.scroll.length).to.eql(0);
+    setTimeout(() => {
+      expect(measurer._queues.scroll.length).to.eql(0);
+      expect(measurer._queues.resize.length).to.eql(0);
+      expect(measurer._queues.inViewPort.length).to.eql(0);
+      done();
+    }, 20);
   });
 
   it('should fire the scroll handler when scroll happens', (done) => {
