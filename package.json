@@ -1,6 +1,6 @@
 {
   "name": "raf-measure",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Utility for performantly measuring resize, scrolling, and elements entering viewport using rAF.",
   "jsnext:main": "lib/index.js",
   "main": "dist/raf-measure.js",
