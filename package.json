@@ -6,7 +6,7 @@
   "main": "dist/raf-measure.js",
   "scripts": {
     "start": "broccoli serve",
-    "test": "rm -rf test-build && TEST=true broccoli build test-build && testem",
+    "test": "rm -rf test-build && TEST=true broccoli build test-build && testem ci",
     "prepublish": "rm -rf dist && broccoli build dist"
   },
   "keywords": [
