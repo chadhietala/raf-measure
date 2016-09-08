@@ -53,6 +53,7 @@ describe('raf-measure', () => {
         expect(measurer._queues.scroll.length).to.eql(0);
         expect(measurer._queues.resize.length).to.eql(0);
         expect(measurer._queues.inViewPort.length).to.eql(0);
+        expect(measurer._queues.deletes.length).to.eql(0);
         done();
       } catch (e) {
         done(e);
