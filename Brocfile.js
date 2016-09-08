@@ -1,7 +1,7 @@
 var Babel = require('broccoli-babel-transpiler');
 var mergeTrees = require('broccoli-merge-trees');
 var funnel = require('broccoli-funnel');
-var amdNameResolver = require('amd-name-resolver');
+var amdNameResolver = require('amd-name-resolver').moduleResolve;
 var lib = funnel('lib', {
   getDestinationPath: function(relativePath) {
     if (relativePath === 'index.js') {
@@ -25,7 +25,7 @@ var dist = new Babel(mergeTrees(lib), {
 });
 
 if (process.env.TEST) {
-  var loader = funnel('bower_components/loader.js', {
+  var loader = funnel('bower_components/loader.js/lib/loader/', {
     include: ['loader.js'],
     destDir: '/'
   });
@@ -47,6 +47,5 @@ if (process.env.TEST) {
 
   dist = mergeTrees([dist, loader, mocha, expect]);
 }
-
 
 module.exports = dist;
