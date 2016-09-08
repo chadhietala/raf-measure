@@ -6,7 +6,7 @@ A utility to performantly event scroll and resize events using requestAnimationF
 
 ### Registering For Scroll Events
 
-```
+```js
 import measurer from 'raf-measure';
 
 let measureId = measurer.register('scroll', {
@@ -18,7 +18,7 @@ let measureId = measurer.register('scroll', {
 
 ### Registering For Resize Events
 
-```
+```js
 import measurer from 'raf-measure';
 
 let measureId = measurer.register('resize', {
@@ -30,7 +30,7 @@ let measureId = measurer.register('resize', {
 
 ### Registering For Elements In View Port
 
-```
+```js
 import measurer from 'raf-measure';
 
 let measureId = measurer.register('inViewPort', {
@@ -44,7 +44,7 @@ let measureId = measurer.register('inViewPort', {
 ```
 
 ### Unregistering Events
-```
+```js
 import measurer from 'raf-measure';
 
 let measureId = measurer.register('inViewPort', {
