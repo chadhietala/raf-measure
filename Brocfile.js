@@ -25,7 +25,7 @@ var dist = new Babel(mergeTrees(lib), {
 });
 
 if (process.env.TEST) {
-  var loader = funnel('bower_components/loader.js', {
+  var loader = funnel('bower_components/loader.js/lib/loader/', {
     include: ['loader.js'],
     destDir: '/'
   });
