@@ -15,12 +15,12 @@
   "author": "Chad Hietala <chadhietala@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "amd-name-resolver": "0.0.2",
+    "amd-name-resolver": "0.0.6",
     "broccoli": "^0.16.8",
     "broccoli-babel-transpiler": "^5.4.5",
     "broccoli-cli": "^1.0.0",
-    "broccoli-funnel": "^0.2.10",
-    "broccoli-merge-trees": "^0.2.3",
+    "broccoli-funnel": "^1.0.6",
+    "broccoli-merge-trees": "^1.1.4",
     "mocha": "^2.3.3",
     "testem": "^0.9.8"
   }
