@@ -9,6 +9,10 @@
     "test": "rm -rf test-build && TEST=true broccoli build test-build && testem ci",
     "prepublish": "rm -rf dist && broccoli build dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chadhietala/raf-measure.git"
+  },
   "keywords": [
     "rAF"
   ],
